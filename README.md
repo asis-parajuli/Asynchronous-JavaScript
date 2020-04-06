@@ -20,10 +20,13 @@ Helps to write Asnchronous code like Synchronous code.
 While using async and await we need to wrap our code inside a try catch block.
 
 try {
+
     const user = await getUser(1);
     const repos = await getRepositories(user.gitHubUsername);
     const commits = await getCommits(repos[0]);
     console.log(commits);
+    
   } catch (err) {
+  
     console.log("Error", err.message);
   }
